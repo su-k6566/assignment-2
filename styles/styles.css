@@ -5,10 +5,16 @@
     font-weight: 400;
     font-style: normal;
   }
+  header, main{
+    margin: 0 140px;
+  }
 
   /* shared styles */
   .flex{
     display: flex;
+  }
+  .align{
+    text-align: center;
   }
   .orange{
     color: #FEA301;
@@ -16,25 +22,36 @@
   .sky-blue{
     color: #01ACFD;
   }
-
-
+  .btn-primary{
+    font-size: 1.25rem;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 45px;
+  }
+  .bg{
+    
+  }
   /* nav */
   .navbar{
-    margin: 0 100px;
+  
     justify-content:space-around;
     align-items: center;
   }
   .nav-items{
     list-style: none;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .brand{
-    gap: 11px;
+    gap: 10px;
     align-items: center;
 }
 .brand-name{
     font-weight: bold;
     font-size: 2rem;
+}
+.icon{
+  visibility: hidden;
 }
 
   .nav-1{
@@ -67,4 +84,128 @@
     border: none;
   }
     
+  /* banner */
+  .banner-title{
+    font-weight: bold;
+    font-size:3.5rem;
+    /* margin-bottom: 24px; */
+  }
+  .banner-details{
+    font-size: 1.25rem;
+    /* margin-bottom: 24px; */
+  }
   
+    .banner-pic{
+    width: 100%;
+  }
+
+  /* curriculum */
+  main{
+    
+    background-image: url(../assets/bg.png);
+    
+    background-size: 100%;
+    
+  }
+
+  .c-1{
+    background: linear-gradient(to top,white 80%, #DEF5FF);
+    border: 1px solid #DEF5FF;
+  }
+  .c-2{
+    background: linear-gradient(to top,white 80%, #FFF4DC);
+    border: 1px solid #FFF4DC;
+  }
+  .c-3{
+    background: linear-gradient(to top,white 80%, #F2E8FF);
+    border: 1px solid #F2E8FF;
+  }
+  .card-container{
+    gap: 28px;
+  }
+  .c-card{
+    width: 360px;
+    height: 470px;
+    border-radius: 18px;
+    align-content: center;
+  }
+  .title{
+    font-weight: bold;
+    font-size: 2.875rem;
+    margin-bottom: 60px;
+    margin-top: 80px;
+  }
+  .card-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+  }
+  .card-details{
+    font-size: 1.066rem;
+    color: #808080;
+    margin-bottom: 30px;
+  }
+  .read-more{
+    font-weight: bold;
+    font-size: 0.94rem;
+  }
+  .btn-1{
+    color: #64C8FF;
+  }
+  .btn-2{
+    color: #F0AA00;
+  }
+  .btn-3{
+    color: #8700FF;
+  }
+  .next-img{
+    width: 130px;
+    height: 60px;
+    margin:30px 465px;
+    
+  }
+  /* responsive for small device */
+
+  @media screen and (max-width: 576px) {
+    header, main{
+      margin: 0;
+    }
+    body{
+      overflow-x: hidden;
+    }
+    
+   .brand-name, .nav-link, .btn{
+    visibility: hidden;
+    }
+    .icon{
+      visibility: visible;
+      
+    }
+    .navbar{
+      border-bottom:1px solid #FEA301;
+      flex-direction: row;
+      overflow-x:hidden;
+    }
+    
+    .banner{
+      max-width: 100%;
+      margin: 0 auto;
+      flex-direction: column-reverse;
+      
+    }
+    
+      .banner-content{
+        justify-items: center;
+        text-align: center;
+        
+      }
+      main{
+        background-image: url(../assets/bg.png);
+        
+      }
+      .card-container{
+        flex-direction: column;
+        align-items: center;
+      }
+
+  }
